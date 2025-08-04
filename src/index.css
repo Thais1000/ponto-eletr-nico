@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%);
+  background-attachment: fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* NOVO: ADICIONE ESTE BLOCO NO FINAL */
+/* Oculta o ícone de 'olho' padrão do Microsoft Edge no campo de senha */
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+/* ... (todo o seu CSS existente) ... */
+
+/* NOVO: Estilos para Impressão */
+@media print {
+  /* Esconde o cabeçalho principal e o formulário de seleção de data */
+  .printable-area .non-printable {
+    display: none;
+  }
+
+  /* Garante que o conteúdo do relatório ocupe todo o espaço */
+  .printable-area {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Remove sombras e outras decorações dos cartões */
+  .MuiPaper-root {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
